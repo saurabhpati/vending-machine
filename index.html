@@ -13,13 +13,14 @@
         <div class="col-md-8"></div>
         <div class="col-md-4">
             <h4>
-                <span id="total"></span>
+                <span id="total" data-bind="text: paid"></span>
                 <br/><br/>
                 <button class="btn btn-primary" onclick="machine.acceptMoney(new Fifty())">Insert Fifty</button>
             </h4>
         </div>
     </div>
 
+    <script src="bower_components/knockout/dist/knockout.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

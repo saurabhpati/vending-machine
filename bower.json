@@ -1,0 +1,20 @@
+{
+  "name": "vending-machine",
+  "homepage": "https://github.com/saurabhpati/vending-machine",
+  "authors": [
+    "Saurabh Pati <saurabhpati.pati@gmail.com>"
+  ],
+  "description": "The vending machine application using typescript",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.2"
+  }
+}

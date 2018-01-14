@@ -1,11 +1,10 @@
 /// <reference path="fifty.ts" />
 
 class VendingMachine {
-    private paid: number = 0;
+    private paid: KnockoutObservable<number> = ko.observable(0);
     
     acceptMoney = (money: Fifty) => {
-        this.paid += money.Value;
-        let element = document.getElementById('total');
-        element.innerHTML = this.paid.toString();
+        let olderPaid = this.paid();
+        this.paid(olderPaid + money.Value);
     }
 }

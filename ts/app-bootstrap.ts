@@ -4,3 +4,4 @@
 /// <reference path="vending-machine.ts" />
 
 let machine = new VendingMachine();
+ko.applyBindings(machine);
