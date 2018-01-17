@@ -1,9 +1,22 @@
 /// <reference path="fifty.ts" />
+/// <reference path="product.ts" />
+/// <reference path="product-factory.ts" />
+
 
 class VendingMachine {
     private paid: KnockoutObservable<number> = ko.observable(0);
     private acceptedMoney: Fifty[] = [new Fifty()];
+    public cells = ko.observableArray([])
 
+    public set Size(givenSize : VendingMachineSize) {
+        this.cells([]);
+
+        for (let index = 0; index < givenSize; index++) {
+            let product: CocaCola = ProductFactory.getProduct();
+            this.cells.push(new Cell(product));
+        }
+    }
+    
     acceptMoney = (money: Fifty): void => {
         let olderPaid = this.paid();
         this.paid(olderPaid + money.Value);
@@ -21,4 +34,10 @@ class Cell {
 
     stock: KnockoutObservable<number> = ko.observable(3);
     sold: KnockoutObservable<boolean> = ko.observable(false);
+}
+
+enum VendingMachineSize {
+    small = 6,
+    medium = 9,
+    large = 12
 }

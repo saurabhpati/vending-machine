@@ -4,4 +4,5 @@
 /// <reference path="vending-machine.ts" />
 
 let machine = new VendingMachine();
+machine.Size = VendingMachineSize.medium;
 ko.applyBindings(machine);

@@ -12,7 +12,18 @@
 <body>
     <div class="container">
         <h1>Vending machine simulation</h1>
-        <div class="col-md-8"></div>
+        <div class="col-md-8 machine foreach: cells">
+            <div class="col-md-4 cell">
+                <div class="col-md-6 image">
+                    <img data-bind="attr: {src: product.category.getImageUrl() , alt: product.category.name}" />
+                </div>
+                <div class="col-md-6 productInfo">
+                    <div data-ng-bind="text: product.name"></div>
+                    <div data-ng-bind="text: stock"></div>
+                    <div data-ng-bind="text: product.price"></div>
+                </div>
+            </div>
+        </div>
         <div class="col-md-4">
             <h4>
                 <span id="total" data-bind="text: paid"></span>
