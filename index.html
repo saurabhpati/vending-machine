@@ -12,15 +12,15 @@
 <body>
     <div class="container">
         <h1>Vending machine simulation</h1>
-        <div class="col-md-8 machine foreach: cells">
+        <div class="col-md-8 machine" data-bind="foreach: cells">
             <div class="col-md-4 cell">
                 <div class="col-md-6 image">
-                    <img data-bind="attr: {src: product.category.getImageUrl() , alt: product.category.name}" />
+                    <img data-bind="attr: {src: product.category.getImageUrl() , alt: product.category.name}" style="height:60px"/>
                 </div>
                 <div class="col-md-6 productInfo">
-                    <div data-ng-bind="text: product.name"></div>
-                    <div data-ng-bind="text: stock"></div>
-                    <div data-ng-bind="text: product.price"></div>
+                    <div data-bind="text: product.name" style="width:80px"></div>
+                    <div data-bind="text: stock">Stock:</div>
+                    <div data-bind="text: product.price">Price:</div>
                 </div>
             </div>
         </div>
