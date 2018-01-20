@@ -42,3 +42,5 @@ As per VS Code v1.19.2, there wasn't any.
 }
 
 4. If you are using any other editor, the 'tsconfig.json' file remains the same while you need to figure out configuring the build operation provided by the editor.
+
+A very important note: Do not forget to build your changes before viewing them.
