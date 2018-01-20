@@ -1,4 +1,4 @@
-/// <reference path="fifty.ts" />
+/// <reference path="money.ts" />
 /// <reference path="product.ts" />
 /// <reference path="product-factory.ts" />
 
