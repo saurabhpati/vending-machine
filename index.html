@@ -35,6 +35,10 @@
             <div data-bind="foreach: acceptedMoney">
                 <img data-bind="attr: {src: getImageUrl(), alt: value}, click: $parent.acceptMoney" />
             </div>
+            <h3 data-bind="with: selectedCell">
+                <div data-bind="text: product.name"></div>
+                <div data-bind="text: product.price"></div>
+            </h3>
         </div>
     </div>
 
