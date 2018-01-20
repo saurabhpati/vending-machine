@@ -33,12 +33,32 @@ class CandyBarCategory extends ProductCategory {
     }
 }
 
-class Candy extends ProductCategory {
+class CandyCategory extends ProductCategory {
     public constructor() {
         super('Candy');
     }
     
     public getImageUrl(): string {
         return 'img/Candy.png';
+    }
+}
+
+class ChipsCategory extends ProductCategory {
+    public constructor() {
+        super('Chips');
+    }
+
+    public getImageUrl(): string {
+        return 'img/Chips.png';
+    }
+}
+
+class NutsCategory extends ProductCategory {
+    public constructor() {
+        super('Nuts');
+    }
+
+    public getImageUrl(): string {
+        return 'img/Nuts.png';
     }
 }
