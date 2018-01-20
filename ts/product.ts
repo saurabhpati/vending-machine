@@ -1,7 +1,7 @@
 /// <reference path="product-category.ts" />
 
 class CocaCola {
-    name = 'Coca-Coca';
+    name = 'Coca-Cola';
     price = 50;
     category = new SodaCategory();
 }

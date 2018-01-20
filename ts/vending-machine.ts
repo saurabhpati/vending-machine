@@ -6,7 +6,7 @@
 class VendingMachine {
     private paid: KnockoutObservable<number> = ko.observable(0);
     private acceptedMoney: Fifty[] = [new Fifty()];
-    public cells = ko.observableArray([])
+    public cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
 
     public set Size(givenSize : VendingMachineSize) {
         this.cells([]);
@@ -17,7 +17,7 @@ class VendingMachine {
         }
     }
     
-    acceptMoney = (money: Fifty): void => {
+    public acceptMoney = (money: Fifty): void => {
         let olderPaid = this.paid();
         this.paid(olderPaid + money.Value);
     }
