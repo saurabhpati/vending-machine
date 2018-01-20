@@ -7,7 +7,7 @@ abstract class Money {
 
     }
 
-    public abstract getImageUrl();
+    public abstract getImageUrl(): string;
 }
 
 class Fifty extends Money {
