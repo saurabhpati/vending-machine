@@ -48,12 +48,12 @@ class Cell {
      * Constructor to initialize the Cell Class.
      * @product: A product to put in a cell.
      */
-    constructor(public product: CocaCola) {
+    public constructor(public product: CocaCola) {
 
     }
 
-    stock: KnockoutObservable<number> = ko.observable(3);
-    sold: KnockoutObservable<boolean> = ko.observable(false);
+    public stock: KnockoutObservable<number> = ko.observable(3);
+    public sold: KnockoutObservable<boolean> = ko.observable(false);
 }
 
 enum VendingMachineSize {
