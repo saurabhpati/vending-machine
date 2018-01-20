@@ -5,7 +5,7 @@
 
 class VendingMachine {
     private paid: KnockoutObservable<number> = ko.observable(0);
-    private acceptedMoney: Fifty[] = [new Fifty()];
+    private acceptedMoney: Money[] = [new Fifty(), new Twenty(), new Ten()];
     private selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new CocaCola()));
     private canPay: KnockoutComputed<Boolean> = ko.pureComputed(() => this.paid() - this.selectedCell().product.price >= 0);
     public cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
@@ -21,7 +21,7 @@ class VendingMachine {
 
     public acceptMoney = (money: Fifty): void => {
         let olderPaid = this.paid();
-        this.paid(olderPaid + money.Value);
+        this.paid(olderPaid + money.value);
     }
 
     public select = (cell: Cell): void => {
