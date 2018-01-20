@@ -39,6 +39,8 @@
                 <div data-bind="text: product.name"></div>
                 <div data-bind="text: product.price"></div>
             </h3>
+
+            <button class="btn btn-primary payButton" data-bind="enable: canPay, click: pay">Pay</button>
         </div>
     </div>
 
