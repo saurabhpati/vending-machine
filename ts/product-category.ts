@@ -1,4 +1,4 @@
-abstract class ProductCategory {
+export abstract class ProductCategory {
     /**
      * The protected constructor for the abstract ProductCategory class.
      */
@@ -10,7 +10,7 @@ abstract class ProductCategory {
 }
 
 
-class SodaCategory extends ProductCategory {
+export class SodaCategory extends ProductCategory {
     /**
      * The public constructor to initialize SodaCategory class.
      */
@@ -23,7 +23,7 @@ class SodaCategory extends ProductCategory {
     }
 }
 
-class CandyBarCategory extends ProductCategory {
+export class CandyBarCategory extends ProductCategory {
     public constructor() {
         super('Candy bar')
     }
@@ -33,7 +33,7 @@ class CandyBarCategory extends ProductCategory {
     }
 }
 
-class CandyCategory extends ProductCategory {
+export class CandyCategory extends ProductCategory {
     public constructor() {
         super('Candy');
     }
@@ -43,7 +43,7 @@ class CandyCategory extends ProductCategory {
     }
 }
 
-class ChipsCategory extends ProductCategory {
+export class ChipsCategory extends ProductCategory {
     public constructor() {
         super('Chips');
     }
@@ -53,7 +53,7 @@ class ChipsCategory extends ProductCategory {
     }
 }
 
-class NutsCategory extends ProductCategory {
+export class NutsCategory extends ProductCategory {
     public constructor() {
         super('Nuts');
     }

@@ -1,4 +1,4 @@
-abstract class Money {
+export abstract class Money {
 
     /**
      * The protected constructor for the abstract class Money.
@@ -10,7 +10,7 @@ abstract class Money {
     public abstract getImageUrl(): string;
 }
 
-class Fifty extends Money {
+export class Fifty extends Money {
     /**
      * The public constructor to initialize the Fifty class.
      */
@@ -24,7 +24,7 @@ class Fifty extends Money {
     
 }
 
-class Twenty extends Money {
+export class Twenty extends Money {
     /**
      * The public constructor to initialize the Twenty class.
      */
@@ -37,7 +37,7 @@ class Twenty extends Money {
     }
 }
 
-class Ten extends Money {
+export class Ten extends Money {
     /**
      * The public constructor to initialize the Ten class.
      */

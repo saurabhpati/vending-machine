@@ -16,7 +16,7 @@
             <div class="col-md-4 cell" data-bind="click: $parent.select, 
             css: {selected: $parent.selectedCell().product == $data.product, sold: sold}">
                 <div class="col-md-6 image">
-                    <img data-bind="attr: {src: product.category.getImageUrl() , alt: product.category.name}" style="height:60px"/>
+                    <img data-bind="attr: {src: product.category.getImageUrl() , alt: product.category.name}" style="height:60px" />
                 </div>
                 <div class="col-md-6 productInfo">
                     <div data-bind="text: product.name" style="width:80px"></div>
@@ -45,7 +45,15 @@
     </div>
 
     <script src="bower_components/knockout/dist/knockout.js"></script>
-    <script src="js/app.js"></script>
+    <script src="bower_components/requirejs/require.js"></script>
+    <script type="text/javascript">
+        require(['js/vending-machine'], function (machineModule) {
+            let machine = new machineModule.VendingMachine();
+            machine.Size = machineModule.VendingMachineSize.medium;
+            ko.applyBindings(machine);
+        })
+
+    </script>
 </body>
 
 </html>

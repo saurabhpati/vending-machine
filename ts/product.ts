@@ -1,79 +1,78 @@
-/// <reference path="product-category.ts" />
+import * as Category from "./product-category";
 
-interface IProduct {
+export interface IProduct {
     name: string;
     price: number;
-    category?: ProductCategory
+    category?: Category.ProductCategory
 }
 
-class Initial implements IProduct {
+export class Initial implements IProduct {
     public name = 'Please select a product';
     price = 0;
 }
 
-class CocaCola implements IProduct {
+export class CocaCola implements IProduct {
     public name = 'Coca-Cola';
     public price = 50;
-    public category = new SodaCategory();
+    public category = new Category.SodaCategory();
 }
 
-class Fanta implements IProduct {
+export class Fanta implements IProduct {
     public name = 'Fanta';
     public price = 50;
-    public category = new SodaCategory();
+    public category = new Category.SodaCategory();
 }
 
-class Lays implements IProduct {
+export class Lays implements IProduct {
     public name = 'Lays';
     public price = 30;
-    public category = new ChipsCategory();
+    public category = new Category.ChipsCategory();
 }
 
-class UncleChips implements IProduct {
+export class UncleChips implements IProduct {
     public name = 'Uncle Chips';
     public price = 20;
-    public category = new ChipsCategory();
+    public category = new Category.ChipsCategory();
 }
 
-class Eclairs implements IProduct {
+export class Eclairs implements IProduct {
     public name = 'Eclairs';
     public price = 10;
-    public category = new CandyCategory();
+    public category = new Category.CandyCategory();
 }
 
-class Melody implements IProduct {
+export class Melody implements IProduct {
     public name = 'Melody';
     public price = 20;
-    public category = new CandyCategory();
+    public category = new Category.CandyCategory();
 }
 
-class Chloromint implements IProduct {
+export class Chloromint implements IProduct {
     public name = 'Chloromint';
     public price = 10;
-    public category = new CandyCategory();
+    public category = new Category.CandyCategory();
 }
 
-class DairyMilk implements IProduct {
+export class DairyMilk implements IProduct {
     public name = 'Dairy Milk';
     public price = 40;
-    public category = new CandyBarCategory();
+    public category = new Category.CandyBarCategory();
 }
 
-class Milkybar implements IProduct {
+export class Milkybar implements IProduct {
     public name = 'Milky Bar';
     public price = 60;
-    public category = new CandyBarCategory();
+    public category = new Category.CandyBarCategory();
 }
 
-class Cashew implements IProduct {
+export class Cashew implements IProduct {
     public name = 'Cashew';
     public price = 30;
-    public category = new NutsCategory();
+    public category = new Category.NutsCategory();
 }
 
-
-class Peanuts implements IProduct {
+export class Peanuts implements IProduct {
     public name = 'Peanuts';
     public price = 30;
-    public category = new NutsCategory();
+    public category = new Category.NutsCategory();
 }

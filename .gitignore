@@ -1,3 +1,5 @@
 .vscode
 js
 bower_components
+ts/*.js
+ts/*.js.map

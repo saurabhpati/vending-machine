@@ -1,9 +1,8 @@
-/// <reference path="money.ts" />
-/// <reference path="product.ts" />
-/// <reference path="product-factory.ts" />
+import { Money, Fifty, Twenty, Ten } from "./money";
+import { IProduct, Initial} from "./product";
+import getProduct from './product-factory';
 
-
-class VendingMachine {
+export class VendingMachine {
     private paid: KnockoutObservable<number> = ko.observable(0);
     private acceptedMoney: Money[] = [new Fifty(), new Twenty(), new Ten()];
     private selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new Initial()));
@@ -14,7 +13,7 @@ class VendingMachine {
         this.cells([]);
 
         for (let index = 0; index < givenSize; index++) {
-            let product: IProduct = ProductFactory.getProduct();
+            let product: IProduct = getProduct();
             this.cells.push(new Cell(product));
         }
     }
@@ -56,7 +55,7 @@ class Cell {
     public sold: KnockoutObservable<boolean> = ko.observable(false);
 }
 
-enum VendingMachineSize {
+export enum VendingMachineSize {
     small = 6,
     medium = 9,
     large = 12
