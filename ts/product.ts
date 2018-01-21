@@ -6,6 +6,11 @@ interface IProduct {
     category?: ProductCategory
 }
 
+class Initial implements IProduct {
+    public name = 'Please select a product';
+    price = 0;
+}
+
 class CocaCola implements IProduct {
     public name = 'Coca-Cola';
     public price = 50;

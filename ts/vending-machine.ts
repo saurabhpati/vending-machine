@@ -6,7 +6,7 @@
 class VendingMachine {
     private paid: KnockoutObservable<number> = ko.observable(0);
     private acceptedMoney: Money[] = [new Fifty(), new Twenty(), new Ten()];
-    private selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new CocaCola()));
+    private selectedCell: KnockoutObservable<Cell> = ko.observable(new Cell(new Initial()));
     private canPay: KnockoutComputed<Boolean> = ko.pureComputed(() => this.paid() - this.selectedCell().product.price >= 0);
     public cells: KnockoutObservableArray<Cell> = ko.observableArray([]);
     
@@ -14,7 +14,7 @@ class VendingMachine {
         this.cells([]);
 
         for (let index = 0; index < givenSize; index++) {
-            let product: CocaCola = ProductFactory.getProduct();
+            let product: IProduct = ProductFactory.getProduct();
             this.cells.push(new Cell(product));
         }
     }
@@ -48,7 +48,7 @@ class Cell {
      * Constructor to initialize the Cell Class.
      * @product: A product to put in a cell.
      */
-    public constructor(public product: CocaCola) {
+    public constructor(public product: IProduct) {
 
     }
 
