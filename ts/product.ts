@@ -64,3 +64,16 @@ class Milkybar implements IProduct {
     public price = 60;
     public category = new CandyBarCategory();
 }
+
+class Cashew implements IProduct {
+    public name = 'Cashew';
+    public price = 30;
+    public category = new NutsCategory();
+}
+
+
+class Peanuts implements IProduct {
+    public name = 'Peanuts';
+    public price = 30;
+    public category = new NutsCategory();
+}

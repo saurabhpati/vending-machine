@@ -2,7 +2,7 @@
 
 class ProductFactory {
     static getProduct = () : IProduct => {
-        let random: number = Math.floor(Math.random() * 9);
+        let random: number = Math.floor(Math.random() * 11);
 
         switch (random) {
             case 0: return new CocaCola();
@@ -14,6 +14,8 @@ class ProductFactory {
             case 6: return new Chloromint();
             case 7: return new DairyMilk();
             case 8: return new Milkybar();
+            case 9: return new Cashew();
+            case 10: return new Peanuts();
             default: throw "Invalid random";
         }
     };
